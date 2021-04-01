@@ -1,0 +1,11 @@
+				SnackHub Build Instructions
+1. Download the code from my github
+2. Downlaod intellij: https://www.jetbrains.com/idea/download/#section=windows
+3.download mysql workbench: https://www.mysql.com/products/workbench/
+4.once you have your local host run user_setup.sql found in the SQL folder of the repository
+5.log in to your newly created user, username: SnackHub pass: SnackHub
+6:in intellij select open project then select the java folder
+7:run DemoApplication.java, keep it running
+8:in Command prompt run the command "CD Path/SnackHub/REACT"
+9:run the command "NPM install"
+10: run the command "NPM start"
