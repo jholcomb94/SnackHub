@@ -15,6 +15,8 @@ public class MenuItem {
     private String description;
     @Column(name = "Price")
     private double price;
+    @Column(name = "Restaurant_RestaurantID")
+    private int restaurantID;
 
 
     public int getId() {
@@ -57,5 +59,13 @@ public class MenuItem {
                 ", description='" + description + '\'' +
                 ", price=" + price +
                 '}';
+    }
+
+    public int getRestaurantID() {
+        return restaurantID;
+    }
+
+    public void setRestaurantID(int restaurantID) {
+        this.restaurantID = restaurantID;
     }
 }

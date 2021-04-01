@@ -31,14 +31,14 @@ public class RestaurantController {
     }
 
     @DeleteMapping({"/deleteRestaurant/{id}"})
-    public String deleteRestaurant(@PathVariable int Id){
-        Restaurant restaurant = (Restaurant) crud.getById(Id);
+    public String deleteRestaurant(@PathVariable int id){
+        Restaurant restaurant = (Restaurant) crud.getById(id);
         if(restaurant == null)
         {
-            throw new RuntimeException("Restaurant not found! id: " + Id);
+            throw new RuntimeException("Restaurant not found! id: " + id);
         }
-        crud.deleteById(Id);
-        return "deleted restaurant with ID: " + Id;
+        crud.deleteById(id);
+        return "deleted restaurant with ID: " + id;
     }
     @PostMapping("/addRestaurant")
     public Restaurant addRestaurant(@RequestBody Restaurant restaurant){
