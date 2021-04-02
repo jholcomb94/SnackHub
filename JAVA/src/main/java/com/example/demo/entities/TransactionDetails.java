@@ -10,7 +10,7 @@ public class TransactionDetails {
     private int id;
     @Column(name = "quantity")
     private int quantity;
-    @Column(name = "MenuItemID")
+    @Column(name = "Menu_ItemID")
     private int menuItemID;
 
 

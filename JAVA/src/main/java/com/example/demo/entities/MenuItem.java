@@ -7,7 +7,7 @@ import javax.persistence.*;
 public class MenuItem {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "MenuItemID")
+    @Column(name = "Menu_ItemID")
     private int id;
     @Column(name = "Name")
     private String name;
