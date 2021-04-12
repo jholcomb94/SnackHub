@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import './pages/PageStyle.css';
 import RouterComponent from './RouterComponent';
@@ -10,13 +9,10 @@ function App() {
       <Navbar.Brand href="#home"><h1>SnackHub</h1></Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
-
           <Nav className="mr-auto">
-
           <Nav.Link href="/">Home</Nav.Link>
-
           <Nav.Link href="/editDB">Edit DB</Nav.Link>
-
+          <Nav.Link href="/logIn">Log in</Nav.Link>
           </Nav>
       </Navbar.Collapse>
       </Navbar>

@@ -27,4 +27,4 @@ class MenuItemService{
 
     }
 }
-export default new MenuItemService
+export default new MenuItemService()

@@ -23,4 +23,4 @@ class TransactionDetailsService{
         return axios.delete(`http://localhost:8080/deleteTransactionDetails/${id}`)
     }
 }
-export default new TransactionDetailsService
+export default new TransactionDetailsService()

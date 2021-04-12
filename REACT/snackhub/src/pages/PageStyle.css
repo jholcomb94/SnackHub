@@ -1,4 +1,9 @@
-.page{
-    background-color: aqua;
-    height: 100%;
+.button{
+    border-radius: 5px;
+    border-width: 3px;
+    width: 200px;
+
 }
+html, body, body > div, .app {
+    background-color: aqua;
+  }
