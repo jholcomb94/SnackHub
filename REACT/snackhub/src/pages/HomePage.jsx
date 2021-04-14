@@ -1,5 +1,5 @@
 import React,{ Component } from 'react';
-import { BrowserRouter as Router, Route, Switch, useParams,Link } from 'react-router-dom';
+import { BrowserRouter as Router,Link } from 'react-router-dom';
 import RestaurantDataService from '../services/RestaurantDataService';
 
  class HomePage extends Component{

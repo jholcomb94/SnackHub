@@ -7,7 +7,7 @@ class RestaurantDataService{
     }
     //retrieve a restaurant
     retrieveRestaurant(id){
-        return axios.get(`http://localhost:8080//retreiveRestaurant/${id}`)
+        return axios.get(`http://localhost:8080/retrieveRestaurant/${id}`)
     }
     //update restaurant
     updateRestaurant(restaurant){

@@ -7,26 +7,31 @@ class RestaurantPage extends Component{
     constructor(props){
         super(props)
         this.state={
-            RestaurantID: "",
-            MenuItems:[]
+            RestaurantID: this.props.match.params.id,
+            MenuItems:[],
+            RestaurantName: ""
         }
         this.refreshList = this.refreshList.bind(this);
         this.componentDidMount = this.componentDidMount.bind(this); 
         //this.filterItems = this.filterItems.bind(this);
     }
-    componentDidMount(){
-
-        this.refreshList();
+     componentDidMount(){
+         this.refreshList();
     }
-    refreshList(){
+     refreshList(){
         MenuItemService.retrieveAllMenuItems().then(Response=>{
             this.setState({
                 MenuItems:Response.data,
-                RestaurantID: this.props.match.params.id
-            }) 
-            console.log(this.state.MenuItems)  
-            console.log(this.state.RestaurantID)
-        })
+            })
+            console.log(Response.data)
+            console.log(this.state.MenuItems) 
+            RestaurantDataService.retrieveRestaurant(this.state.RestaurantID).then(Response=>{
+                this.setState({
+                    RestaurantName: Response.data.name
+                })
+            })
+         }
+        )
         //this.filterItems()
         
     }
@@ -43,15 +48,17 @@ class RestaurantPage extends Component{
         return(
             <div>
                 <table>
+                <h1>{this.state.RestaurantName}</h1>
                     <tbody>
                         {
+                            
                             this.state.MenuItems.map(
                                 menuItem=>
                                 <tr>
                                     {
-                                        menuItem.restaurantID === this.state.restaurantID?
+                                        menuItem.restaurantID == this.state.RestaurantID?
                                         <td>{menuItem.name}</td>:
-                                        <td>{menuItem.restaurantID}</td>
+                                        <td> id : {this.state.RestaurantID}</td>
                                     }
                                 </tr>
                             )
